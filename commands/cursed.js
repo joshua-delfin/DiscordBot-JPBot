@@ -14,5 +14,7 @@ module.exports = {
         message.channel.send({
             files: [{attachment: 'Images/' + chosenFile}]
         });
+
+    console.log(args);
     }
 }

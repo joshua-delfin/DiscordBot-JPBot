@@ -24,7 +24,7 @@ client.once('ready', () => {
 });
 
 //Commands
-client.on('message', message =>{
+client.on('messageCreate', message =>{
 
     //First check if it starts with prefix, and is not the bot's message
     if(!message.content.startsWith(prefix) || message.author.bot) return; 
@@ -52,7 +52,16 @@ client.on('message', message =>{
         client.commands.get('cursed').execute(message, args);
     }
 
+    //Indecisive help
+    if(command === 'decide'){
+        client.commands.get('decide').execute(message, args);
+    }
+
+    //Quote of the day (Via brainyquote.com)
+    if(command === 'dailyquote' || command === 'dq'){
+        client.commands.get('dailyQuote').execute(message, args);
+    }
 });
 
 //KEEP THIS AS THE LAST LINE OF THE FILE
-client.login('OTk2OTM2OTQ3MjI4NDc5NTk4.GKHsWq.axZSuF-rSmjVEZLAx2Slofd4YTrWT9_SyDV_VI');
+client.login('OTk2OTM2OTQ3MjI4NDc5NTk4.GwOSn4.1uIeXJ0HESA_oXcttFt91g8PQoaUXIEcUbbr40');
