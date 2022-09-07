@@ -1,9 +1,12 @@
 const puppeteer = require('puppeteer');
 
 async function scrapeProduct(url){
-    const brower = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+        headless: true,
+        args: ['--no-sandbox']
+    });
 
-    const page = await brower.newPage();
+    const page = await browser.newPage();
 
     await page.goto(url);
 
