@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+require('dotenv').config();
 
 const client = new Discord.Client({intents:["GUILDS","GUILD_MESSAGES"]});
 
@@ -64,4 +65,4 @@ client.on('messageCreate', message =>{
 });
 
 //KEEP THIS AS THE LAST LINE OF THE FILE
-client.login('OTk2OTM2OTQ3MjI4NDc5NTk4.GZeYOv.Wgboy615ltyat-5krD8pGoQf9bcBqBcglnweHc');
+client.login(process.env.BOT_TOKEN);
