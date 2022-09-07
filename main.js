@@ -64,4 +64,4 @@ client.on('messageCreate', message =>{
 });
 
 //KEEP THIS AS THE LAST LINE OF THE FILE
-client.login('OTk2OTM2OTQ3MjI4NDc5NTk4.GwOSn4.1uIeXJ0HESA_oXcttFt91g8PQoaUXIEcUbbr40');
+client.login('OTk2OTM2OTQ3MjI4NDc5NTk4.GZeYOv.Wgboy615ltyat-5krD8pGoQf9bcBqBcglnweHc');
