@@ -8,7 +8,10 @@ module.exports = {
 
     execute(message, args){
         async function scrapeProduct(url){
-            const browser = await puppeteer.launch();
+            const browser = await puppeteer.launch({
+                headless: false,
+                args: ["--no-sandbox"]
+            });
         
             const page = await browser.newPage();
         
