@@ -9,7 +9,7 @@ module.exports = {
     execute(message, args){
         async function scrapeProduct(url){
             const browser = await puppeteer.launch({
-                headless: false,
+                headless: true,
                 args: ["--no-sandbox"]
             });
         
