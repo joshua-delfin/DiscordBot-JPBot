@@ -1,13 +1,11 @@
-📋 List of All Available Commands! 📋
+📋 List of All Available Commands! 📋\n
 
-👨‍🏫 !help        - A list of all available commands. (You are here right now)
-🏓 !ping        - Just used to get a response from JP-bot
-🔢 !random      - Generates a random number from 1 - 100.
-🙈 !decide      - Takes in prompts and chooses a random idea. Great for indecisive individuals and groups. 
-                    + Command use: "!decide idea1 idea2 idea3" 
-👹 !cursed      - Used at your own risk! (Just some funny classic JP photos) 
-📜 !dailyquote  - Gets the quote of the day via brainyquote.com (web scraper)
-
-
-
-👩🏻‍💻 !portfolio - A link to my current GitHub Portfolio!
+👨‍🏫 !help        - A list of all available commands. (You are here right now)\n
+🏓 !ping        - Just used to get a response from JP-bot\n
+🔢 !random      - Generates a random number from 1 - 100.\n
+🙈 !decide      - Takes in prompts and chooses a random idea. Great for indecisive individuals and groups.\n
+                    + Command use: "!decide idea1 idea2 idea3"\n
+👹 !cursed      - Used at your own risk! (Just some funny classic JP photos) \n
+📜 !dailyquote  - Gets the quote of the day via brainyquote.com (web scraper)\n
+\n
+👩🏻‍💻 !portfolio - A link to my current GitHub Portfolio!\n
