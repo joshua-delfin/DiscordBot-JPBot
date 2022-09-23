@@ -4,7 +4,7 @@ require('dotenv').config();
 const client = new Discord.Client({intents:["GUILDS","GUILD_MESSAGES"]});
 
 const fs = require('fs');
-
+const mongo = require('./mongo')
 client.commands = new Discord.Collection();
 
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
@@ -22,6 +22,16 @@ const prefix = '!'
 
 client.once('ready', () => {
     console.log("JPBot has come online!");
+
+    await mongo().then(mongoose =>{
+        try{
+            //Try something
+            console.log('Connected to mongo!');
+        }finally{
+            //Will always run
+            mongoose.connection.close();
+        }
+    })
 });
 
 //Commands
