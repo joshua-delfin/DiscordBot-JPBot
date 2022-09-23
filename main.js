@@ -20,8 +20,8 @@ for(const file of commandFiles){
 const prefix = '!'
 
 
-client.once('ready', () => {
-    console.log("JPBot has come online!");
+client.on('ready', async () => {
+    console.log("JPBot has come online!")
 
     await mongo().then(mongoose =>{
         try{
