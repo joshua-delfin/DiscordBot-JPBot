@@ -1,37 +1,28 @@
 const Discord = require('discord.js');
-require('dotenv').config();
+const fs = require('fs');
+const mongo = require('./mongo');
+const config = require('./config.json');
+const welcome = require('./commands/welcome');
 
 const client = new Discord.Client({intents:["GUILDS","GUILD_MESSAGES"]});
+const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
-const fs = require('fs');
-const mongo = require('./mongo')
+require('dotenv').config();
+
 client.commands = new Discord.Collection();
 
-const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
+
 for(const file of commandFiles){
     const command = require(`./commands/${file}`);
-
     client.commands.set(command.name, command);
 }
 
-
-
-//Setting up Command Prefix
+//Setting up Command Prefix 
 const prefix = '!'
-
 
 client.on('ready', async () => {
     console.log("JPBot has come online!")
-
-    await mongo().then(mongoose =>{
-        try{
-            //Try something
-            console.log('Connected to mongo!');
-        }finally{
-            //Will always run
-            mongoose.connection.close();
-        }
-    })
+    welcome(client);
 });
 
 //Commands

@@ -12,6 +12,8 @@
   "dependencies": {
     "discord.js": "^13.8.1",
     "dotenv": "^16.0.2",
+    "mongo": "^0.1.0",
+    "mongodb": "^4.10.0",
     "mongoose": "^6.6.1",
     "puppeteer": "^15.5.0"
   }
