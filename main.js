@@ -1,8 +1,6 @@
 const Discord = require('discord.js');
 const fs = require('fs');
-const mongo = require('./mongo');
 const config = require('./config.json');
-const welcome = require('./commands/welcome');
 
 const client = new Discord.Client({intents:["GUILDS","GUILD_MESSAGES"]});
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
@@ -22,7 +20,6 @@ const prefix = '!'
 
 client.on('ready', async () => {
     console.log("JPBot has come online!")
-    welcome(client);
 });
 
 //Commands
