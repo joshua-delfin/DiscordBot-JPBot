@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const fs = require('fs');
 const config = require('./config.json');
+const mongoose = require('mongoose');
 
 const client = new Discord.Client({intents:["GUILDS","GUILD_MESSAGES"]});
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
@@ -60,6 +61,17 @@ client.on('messageCreate', message =>{
     if(command === 'dailyquote' || command === 'dq'){
         client.commands.get('dailyQuote').execute(message, args);
     }
+});
+
+//CONNECTING MONGODB
+mongoose.connect(process.env.MONGODB_SRV, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false
+}).then(()=>{
+    console.log('Connected to the database')
+}).catch((err)=>{
+    console.log(err);
 });
 
 //KEEP THIS AS THE LAST LINE OF THE FILE
