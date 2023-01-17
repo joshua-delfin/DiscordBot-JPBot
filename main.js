@@ -65,9 +65,9 @@ client.on('messageCreate', message =>{
 
 //CONNECTING MONGODB
 mongoose.connect(process.env.MONGODB_SRV, {
-    useNewUrlParser: true,
+    /*useNewUrlParser: true,
     useUnifiedTopology: true,
-    useFindAndModify: false
+    useFindAndModify: false*/
 }).then(()=>{
     console.log('Connected to the database')
 }).catch((err)=>{
